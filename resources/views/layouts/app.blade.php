@@ -21,6 +21,7 @@
     @include('layouts._header')
 
     <div class="container">
+        @include('layouts._message')
         <!--占位符声明，允许继承此模板的页面注入内容-->
         @yield('content')
 
