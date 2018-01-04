@@ -38,3 +38,4 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 //可以看到使用 resource 方法不仅节省很多代码，且严格遵循了 RESTful URI 的规范，在后续的开发中，我们会优先选择 resource 路由
 
 Route::resource('projects', 'ProjectsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
