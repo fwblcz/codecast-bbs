@@ -12,6 +12,7 @@
 
     <!-- Styles  使用当前请求的协议（ HTTP 或 HTTPS ）为资源文件生成一个 URL，以我们的情况，会生成 http://larabbs.app/css/app.css-->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 
 <body>
@@ -32,5 +33,6 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
 </body>
 </html>
