@@ -56,3 +56,23 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
+## GitHub 上 window版本的Redis-x64-3.2.100.zip 下载没网速 以及安装
+
+- GitHub 上 window版本的Redis-x64-3.2.100.zip 下载没网速，需要上外网，翻墙下载，也可以在百度链接上下载：https://pan.baidu.com/s/1dFJD217;
+  打开一个 cmd 窗口 使用cd命令切换目录到 C:\redis 运行 redis-server.exe redis.windows.conf
+    
+- redis 启动:
+  打开一个命令窗口，进入到你解压的目录，输入命令：redis-server redis.windows.conf
+
+- 部署redis为windows下的服务 命令如下：
+  再打开一个新的命令窗口，输入命令：redis-server --service-install redis.windows.conf
+
+- 安装后的启动服务命令：redis-server --service-start
+- 停止服务命令：redis-server --service-stop
+
+- redis的卸载命令：redis-server --service-uninstall
+
+- 推荐一个redis的管理工具：Redis Desktop Manager
+
