@@ -272,3 +272,14 @@ $ php artisan migrate:refresh --seed
 </pre>
 
 Laravel 的 migrate:refresh 命令会回滚数据库的所有迁移，并运行 migrate 命令，--seed 选项会同时运行 db:seed 命令。
+
+
+## 启动elasticsearch
+<pre>
+C:\>cd elasticsearch-rtf-master
+
+C:\elasticsearch-rtf-master>cd bin
+
+C:\elasticsearch-rtf-master\bin>elasticsearch -d
+</pre>
+
