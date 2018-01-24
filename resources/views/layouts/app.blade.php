@@ -8,8 +8,9 @@
     <!-- CSRF Token csrf-token 标签是为了方便前端的 JavaScript 脚本获取 CSRF 令牌 -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--继承此模板的页面，如果没有定制 title 区域的话，就会自动使用第二个参数 LaraBBS 作为标题前缀-->
-    <title>@yield('title', 'LaraBBS') - Laravel 进阶教程</title>
-    <meta name="description" content="@yield('description', 'LaraBBS 爱好者社区')" />
+    <title>@yield('title', 'LaraBBS') - {{ setting('site_name', 'Laravel 进阶教程') }}</title>
+    <meta name="description" content="@yield('description', setting('seo_description', 'LaraBBS 爱好者社区。'))" />
+    <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'LaraBBS,社区,论坛,开发者论坛'))" />
 
     <!-- Styles  使用当前请求的协议（ HTTP 或 HTTPS ）为资源文件生成一个 URL，以我们的情况，会生成 http://larabbs.app/css/app.css-->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
