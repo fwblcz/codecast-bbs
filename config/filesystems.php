@@ -62,6 +62,14 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+        'upyun' => [
+            'driver'        => 'upyun',
+            'bucket'        => 'demo-fu',// 服务名字
+            'operator'      => 'fuwenbin', // 操作员的名字
+            'password'      => '898989lk', // 操作员的密码
+            'domain'        => 'demo-fu.test.upcdn.net', // 服务分配的域名
+            'protocol'     => 'http', // 服务使用的协议，如需使用 http，在此配置 http
+        ],
 
     ],
 

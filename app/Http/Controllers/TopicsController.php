@@ -14,11 +14,13 @@ class TopicsController extends Controller
 {
     public function __construct()
     {
+
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
 	public function index(Request $request, Topic $topic)
 	{
+//		dd($request->session()->all());
 		$topics = $topic->withOrder($request->order)->paginate(20);
 		return view('topics.index', compact('topics'));
 	}

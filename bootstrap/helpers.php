@@ -13,3 +13,11 @@
         $excerpt = trim(preg_replace('/\r\n|\r|\n+/', ' ', strip_tags($value)));
         return str_limit($excerpt, $length);
     }
+    //判断一个返回的字符串是不是一个合法的 JSON 字符串
+    function isJson($string) {
+
+        json_decode($string);
+
+        return (json_last_error() == JSON_ERROR_NONE);
+
+    }
