@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Models\Reply;
 use App\Models\Topic;
+use App\Observers\LinkObserver;
 use App\Observers\ReplyObserver;
 use App\Observers\TopicObserver;
+use App\Observers\UserObserver;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,13 +20,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        \App\Models\User::observe(\App\Observers\UserObserver::class);
-        \App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
-        \App\Models\Topic::observe(\App\Observers\TopicObserver::class);
-        \App\Models\Link::observe(\App\Observers\LinkObserver::class);
+        Schema::defaultStringLength(191);
+        \App\Models\User::observe(UserObserver::class);
+        \App\Models\Reply::observe(ReplyObserver::class);
+        \App\Models\Topic::observe(TopicObserver::class);
+        \App\Models\Link::observe(LinkObserver::class);
 
         // Carbon 中文化配置
         \Carbon\Carbon::setLocale('zh');
+
     }
 
     /**
