@@ -20,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
         'Illuminate\Database\Events\QueryExecuted' => [
             'App\Listeners\QueryListener'
         ],
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            // add your listeners (aka providers) here
+            'SocialiteProviders\Weixin\WeixinExtendSocialite@handle'
+        ],
     ];
 
     /**
